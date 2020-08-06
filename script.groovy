@@ -6,7 +6,7 @@ echo "I am a test stage"
 }
 def DeployApp(){
 echo "I am a deploy stage"
-echo "Deploying Version ${params.VERSION}
+echo "Deploying Version ${params.VERSION}"
 }
 
 return this
