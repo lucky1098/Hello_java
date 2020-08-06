@@ -6,16 +6,17 @@ pipeline {
   }
     stages{
       stage("build"){
-        when {
-          expression {
-          param.executeTest
-          }
-        }
+       
          steps{
             echo "This is build stage"
       }
     }
     stage("test"){
+       when {
+          expression {
+          param.executeTest
+          }
+        }
          steps{
             echo "This is build stage"
       }
