@@ -14,7 +14,7 @@ pipeline {
     stage("test"){
        when {
           expression {
-          param.executeTest
+          params.executeTest
           }
         }
          steps{
@@ -24,7 +24,7 @@ pipeline {
     stage("deploy"){
          steps{
             echo "This is build stage"
-           echo "this is version ${param.VERSION}"
+           echo "this is version ${params.VERSION}"
       }
     }
 }
