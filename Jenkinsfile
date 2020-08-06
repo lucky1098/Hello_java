@@ -1,7 +1,7 @@
 pipeline {
   agent any
   parameters{
-    string(name :'VERSION', choice :['1.0.1','1.0.2','1.0.3'], description :'This is to show description')
+    string(name :'VERSION', choices :['1.0.1','1.0.2','1.0.3'], description :'This is to show description')
     booleanParam(name : 'executeText', defaultValue :'true')
   }
     stages{
