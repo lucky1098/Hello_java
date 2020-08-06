@@ -1,7 +1,16 @@
 pipeline {
   agent any
+  parameters{
+    string(name :'VERSION', choice :['1.0.1','1.0.2','1.0.3'], description :'This is to show description')
+    booleasParam(name : 'executeText', defaultValue :'true')
+  }
     stages{
       stage("build"){
+        when{
+          expression{
+          param.executeTest
+          }
+        }
          steps{
             echo "This is build stage"
       }
@@ -14,6 +23,7 @@ pipeline {
     stage("deploy"){
          steps{
             echo "This is build stage"
+           echo "this is version ${param.VERSION}"
       }
     }
 }
