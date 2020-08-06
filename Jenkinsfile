@@ -6,8 +6,8 @@ pipeline {
   }
     stages{
       stage("build"){
-        when{
-          expression{
+        when {
+          expression {
           param.executeTest == 'true'
           }
         }
